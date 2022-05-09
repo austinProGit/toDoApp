@@ -12,16 +12,19 @@
   </head>
   <body>
     <div class="container-fluid">
-      <div class="row bg-info">
+      <div class="row">
         <div class="col">
           <header>
-            <h1 class="text-light text-center">To-Do Helper App</h1>
+            <h1 class="text-light text-center bg-info">To-Do Helper App</h1>
           </header>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <main>
+<!--             <p class="bg-success">
+              Create New To-Do
+            </p> -->
             <h1 class="bg-success">
               Create New To-Do
             </h1>
@@ -37,6 +40,10 @@
               <div class="form-group">
                 <label for="toDoUrg">To-Do Urgency: </label>
                 <input type="number" class="form-control" id="toDoUrg" name="toDoUrg" placeholder="How urgent is your task? (1 to 10)" min="1" max="10" required>
+              </div>
+              <div class="form-group">
+                <label for=toDoDate">To-Do Date: </label>
+                <input type="date" class="form-control" id="toDoDate" name="toDoDate" placeholder="Enter date (ddmmyyyy)" required>
               </div>
               <button type="submit" class="btn btn-primary">Add my new To-Do</button>
             </form>
@@ -61,7 +68,11 @@
             <h1 class="bg-warning">
               Current To-Dos
             </h1>
-            <p id="toDoListTarget"></p>
+<!--            <div id="toDoListTarget">
+            </div> -->
+            <ul id="toDoListTarget"></ul>
+            <button onclick="sortByUrgency()" class="btn btn-primary">Sort by Urgency</button>
+            <button onclick="sortByDate()" class="btn btn-primary">Sort by Date</button> 
           </main>
         </div>
       </div>
